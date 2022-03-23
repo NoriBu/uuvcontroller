@@ -1,0 +1,13 @@
+digraph G {
+"world" -> "world_ned"[label="Broadcaster: /world_ned_frame_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 354.200 sec old)\nBuffer length: 0.000 sec\n"];
+"uuvfloat/base_link" -> "uuvfloat/base_link_ned"[label="Broadcaster: /gazebo\nAverage rate: 100.202 Hz\nMost recent transform: 354.200 ( 0.000 sec old)\nBuffer length: 4.940 sec\n"];
+"uuvfloat/base_link" -> "uuvfloat/altimeter_link"[label="Broadcaster: /uuvfloat/robot_state_publisher\nAverage rate: 5.208 Hz\nMost recent transform: 354.200 ( 0.000 sec old)\nBuffer length: 4.800 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 354.200"[ shape=plaintext ] ;
+ }->"world";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 354.200"[ shape=plaintext ] ;
+ }->"uuvfloat/base_link";
+}
